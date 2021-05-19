@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt 20210411
+name: OpenWrt 20210519
 
 on:
   push:
@@ -57,7 +57,10 @@ jobs:
           git clone https://github.com/NateLol/luci-app-beardropper.git
           git clone https://github.com/destan19/OpenAppFilter.git
           git clone https://github.com/geniusrichter/PPTP.git
+          git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+          git clone https://github.com/jerrykuku/luci-app-vssr.git
           git clone https://github.com/Leo-Jo-My/luci-theme-argon-dark-mod.git
+          git clone https://github.com/jerrykuku/luci-theme-argon.git
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
           # ln -s /mnt/openwrt/bin ./bin
           # mkdir -p ./build_dir
@@ -190,6 +193,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-passwall=y
           CONFIG_PACKAGE_luci-app-oaf=y
           CONFIG_PACKAGE_luci-app-pptp-server=y
+          CONFIG_PACKAGE_luci-app-dailybonus=y
+          CONFIG_PACKAGE_luci-app-vssr=y
           CONFIG_PACKAGE_luci-app-xlnetacc=n
           EOF
           # LuCI主题:
